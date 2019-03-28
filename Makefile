@@ -1,4 +1,4 @@
-all: name.o name
+all:	name.o name
 
 name.o:	name.asm
 	nasm -f elf64 name.asm
