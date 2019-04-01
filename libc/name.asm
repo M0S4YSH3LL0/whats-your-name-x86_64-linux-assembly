@@ -1,22 +1,22 @@
 extern     printf
 extern     scanf
 
-SYS_WRITE  equ 1
-SYS_READ   equ 0
+;SYS_WRITE  equ 1
+;SYS_READ   equ 0
 SYS_EXIT   equ 60
 
 STD_IN     equ 0
 STD_OUT    equ 1
-STD_ERR    equ 2
+;STD_ERR    equ 2
 
-%macro write_string 2
+%macro print 2
     mov rdi, %2
     mov rsi, %1
     mov rax, 0
     call printf
 %endmacro
 
-%macro scan_input 2
+%macro scan 2
     mov rsi, %1
     mov rdi, %2
     mov rax, 0
@@ -36,14 +36,13 @@ section .text
     global main
 
 main:
-    write_string prompt, str_fmt
-    scan_input name, input_fmt
-    write_string name, name_fmt
+    print prompt, str_fmt
+    scan name, input_fmt
+    print name, name_fmt
 
-    call _exit
+    call exit
 
-_exit:
+exit:
     mov rax, SYS_EXIT
     mov rdx, 0
     syscall
-    ;ret
