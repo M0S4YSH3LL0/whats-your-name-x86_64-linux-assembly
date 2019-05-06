@@ -1,10 +1,9 @@
+; this approach makes use of subroutine calls
+
 extern     printf
 extern     scanf
 
 SYS_EXIT   equ 60
-
-STD_IN     equ 0
-STD_OUT    equ 1
 
 section .data
     prompt:      db  "What is your name? ",0, 0

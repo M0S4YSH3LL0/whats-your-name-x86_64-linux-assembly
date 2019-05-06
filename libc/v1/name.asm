@@ -1,13 +1,9 @@
+; this approach makes use of assembly macros
+
 extern     printf
 extern     scanf
 
-;SYS_WRITE  equ 1
-;SYS_READ   equ 0
 SYS_EXIT   equ 60
-
-STD_IN     equ 0
-STD_OUT    equ 1
-;STD_ERR    equ 2
 
 %macro print 2
     mov rdi, %2
