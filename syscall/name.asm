@@ -11,10 +11,10 @@ section .data
     prompt:         db  "What is your name? ",0, 0
     prompt_len:     equ $ - prompt
     greeting:       db  "Hello, ", 0, 0
-    greeting_len:    equ $ - greeting
+    greeting_len:   equ $ - greeting
 
 section .bss
-    name:         resb  0x10
+    name:           resb  0x10
 
 section .text
     global _start
