@@ -4,8 +4,9 @@ The program basically asks for your name, reads it in via scanf and prints it to
 Since I'm currently learning assembly and want to escape the noobish level I'm on right now, feel free to create pull-request with optimization for the code.
 
 # How to compile
-make all
-(clean with: make clean)
+> make all
+
+> (clean with: make clean)
 
 # Output
 $ ./name
